@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: border-box;
+     /* margin-right:10vh ; */
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    /* height: 100vh; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow-x:hidden;
+    /* background-color: white; */
+    
+}
+/* Preloader container */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s ease; /* smooth fade-out */
+}
+
+/* Image inside preloader */
+.preload-img {
+    width: 120px;
+    height: auto;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation for the image */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Fade-out effect */
+.fade-out {
+    opacity: 0;
+}
+/* Circle Scroll-to-Top Button */
+#levelup-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    /* background: linear-gradient(45deg, #ff0057, #ff7b00); */
+background-color: red;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* hidden until scroll */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px #fff9fb, 0 0 30px #ffffff;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+/* Hover Glow Effect */
+#levelup-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #ffffff, 0 0 50px #ff7b00;
+}
+/* WhatsApp Floating Button */
+.whatsapp-btn {
+    position: fixed;
+    left: 20px;        /* left side */
+    bottom: 30px;      /* bottom from screen */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* WhatsApp green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 9999;
+}
+
+/* Hover effect */
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* WhatsApp icon inside button */
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.main-div{
+    display: flex;
+    gap: 250px ;
+    background-color: white;
+    /* margin-top: -5px; */
+    position: fixed;
+    width: 100%;
+    
+}
+.logo{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.links{
+    text-decoration: none;
+    margin-top:35px;
+    margin-left: -20px;
+    
+
+}
+.links a{
+    color: black;
+    font-size: 14px;
+    font-size: large;
+    
+    text-decoration: none; 
+}
+.links a:hover{
+    color: red;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    background: #ec5b53;
+    font-size: large;
+     display: inline-flex;
+     margin-top: 20px;  
+     border-radius: 5px;
+     width: 200px;
+     height: 50px;
+     align-items: center;
+     justify-content: center;  
+     cursor: pointer;
+     margin-left: -170px;
+     
+}
+.btn a:hover{
+    background-color: red;
+    /* transition: cubic-bezier(0.39, 0.575, 0.565, 1) ; */
+    /* margin-top: 10px; */
+    
+}
+.about{
+    margin-top: 100px;
+}
+.aboutme{
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.abouth1{
+    margin-top: -260px;
+    margin-left: 90px;
+    color: #000a2d;
+    font-size: 45px;
+    font-family: "Rufina", serif;
+}
+.abouticon{
+    color: #ec5b53;
+    margin-left: 90px;
+    margin-top: 20px;
+    
+}
+.abouticon a{
+    color: #ec5b53;
+    margin: 5px;
+    font-size: 19px;
+    text-decoration: none;
+
+}
+.formheading{
+        color: #05364d;
+        margin-top: 30px;
+        margin-left: 150px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 20%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f0e9ff; 
+   border-top: 1px solid #f0e9ff; 
+    border-left: 1px solid #f0e9ff; 
+     border-right: 1px solid #f0e9ff; 
+  /* Optional thin line at the bottom */
+  font-size: 12px;
+  color: #333;
+  outline: none;
+margin-left: 800px;
+line-height: 4;
+
+}
+.forms{
+    display: flex;
+}
+.formmessage{
+    width: 158%;
+}
+.formname{
+    width: 70%;
+}
+.formemail{
+    margin-left: -1050px;
+    width: 70%;
+}
+.formsubject{
+    width: 158%;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+.forminfo{
+    /* margin-top: -340px; */
+    margin-left: -650px;
+    margin-top: 30px;
+    
+}
+.button2 a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: #cc1414;
+}
+.button2 :hover{
+    background-color: #ec5b53;
+    color: #f0e9ff;
+
+}
+.button2{
+     margin-left: 150px;
+     margin-top: 10px;
+    display: inline-block;
+    color: red;
+    letter-spacing: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0 38px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: white;
+    background-size: 200% auto;
+     border-bottom: 1px solid #ff0000; 
+   border-top: 1px solid #eb0000; 
+    border-left: 1px solid #ff0000; 
+     border-right: 1px solid #ff1111; 
+    
+}
+.sen :hover{
+    background-color: red;
+    color: white;
+}
+.address{
+    margin-left: 1000px;
+    margin-top: -370px;
+
+}
+.addressicon1{
+    /* margin-top: 20px; */
+    font-size: 27px;
+    display: flex;
+}
+.addressicon2{
+    margin-top: 50px;
+    font-size: 27px;
+    display: flex;
+}
+.addressicon3{
+    margin-top: 50px;
+
+    font-size: 27px;
+    display: flex;
+}
+.addressicon a{
+    color: #8f9195;
+
+}
+.iconpara1{
+    font-size: medium;
+    font-family: "Rufina", serif;
+    font-weight: 500;
+
+       font-size: 16px;
+color: #2a2a2a;
+    margin-left: 10px;
+    /* margin-top: 10px; */
+}   
+.iconfig{
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 300;
+    font-family: "Rufina", serif;
+    color: #797979;
+
+}
+.footer{ 
+        background: #080827;
+width: 1500px;
+margin-left: -117px;
+height: 600px;
+/* margin-bottom: -480px; */
+margin-top: 250px;
+}
+.footerimg{
+    margin-top: -550px;
+    align-items: center;
+    margin-left: 560px;
+}
+.footertag{
+display: flex;
+margin-left: 350px;
+margin-top: 50px;
+gap: 40px;
+}
+.footertag a{
+    text-decoration: none;
+    color: white;
+}
+.footericon {
+    display: flex;
+    margin-left: 1000px;
+    margin-top: 160px;
+    gap: 20px;
+     color: #c5c5dd;
+}
+.footericon1 a{
+     color: #c5c5dd;
+    /* font-size: large; */
+}
+.footericon2 a{
+     color: #c5c5dd;
+    /* font-size: large; */
+}
+.footericon3 a{
+     color: #c5c5dd;
+    /* font-size: large; */
+}
+.footericon4 a{
+     color: #c5c5dd;
+    /* font-size: large; */
+}
+.footerpara{
+    /* color: white; */
+    margin-left: 50px;
+    margin-top: 40px;
+    text-align: center;
+    color: #c5c5dd;
+    line-height: 1.7;
+}
+.footerh1{
+    margin-left: 430px;
+    color: #f8faff;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 60px;
+}
+.footerpara1{
+    color: #393a50;
+    margin-top: 0px;
+    margin-left: -1150px;
+    font-size: 16px;
+    
+}
